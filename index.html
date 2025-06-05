@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+
+<html lang="en" style="--primary-color: #0a3d62; --secondary-color: #f39c12; --background-color: #f8f9fa; --text-color: #333;">
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<style>
+    body {
+      background-color: #f9f9f9 !important;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+    h1, h2, h3, h4, h5 {
+      color: #1e3a8a;
+    }
+  
+#fixed-social-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ANAV Lifespaces is a premium real estate developer offering luxurious and affordable properties in India." name="description"/>
+<meta content="Real Estate, Property, ANAV Lifespaces, Residential, Commercial" name="keywords"/>
+<meta content="ANAV Lifespaces Real Estate" name="author"/>
+<link href="image/logo1.png" rel="icon" type="image/png"/>
+<title>ANAV Lifespaces</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<!-- Lightbox2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- Swiper CSS -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style> 
+  
+  #about {
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    padding: 60px 20px;
+  }
+
+  #about .container {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  #about h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  #about p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  #about ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  #about ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #444;
+  }
+
+  #about ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #16a34a;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    #about h2 {
+      font-size: 2rem;
+    }
+
+    #about p,
+    #about ul {
+      text-align: center;
+    }
+  }
+   /*end of style about us  */
+  
+  .hero {
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 0;
+    font-size: 1.1rem;
+  }
+}
+
+  .carousel,
+.carousel-item,
+.carousel-item img {
+  height: auto;
+  width: 100vw; /* Full screen width */
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+@media (max-width: 768px) {
+  .carousel,
+  .carousel-item,
+  .carousel-item img {
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+
+  body {
+  overflow-x: hidden;
+}
+
+  
+  body {
+    background-color:#f0e6d2; /* Very light beige */
+    color: #222; /* Darker text for good contrast */
+}
+
+  :root {
+  --primary-color: #0D47A1;
+  --secondary-color: #FFC107;
+  --background-color: #F5F5F5;
+  --text-color: #333333;
+  --navbar-bg: #ffffff;
+}
+
+/* Global styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--navbar-bg);
+}
+
+.navbar a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(13, 71, 161, 0.6), rgba(13, 71, 161, 0.6)), url('your-image.jpg') center/cover no-repeat;
+  color: #ffffff;
+}
+/* --- ADD THE FOLLOWING CODE HERE --- */
+.hero-text-overlay {
+    @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    height: auto !important;
+    position: relative !important;
+  }
+
+  section, div, .container, .row, .col {
+    max-width: 100vw !important;
+    overflow: visible !important;
+    height: auto !important;
+    position: relative !important;
+    display: block !important;
+  }
+
+  .carousel,
+  .carousel-item,
+  .carousel-item img {
+    height: 26vh !important;
+    object-fit: contain !important;
+    width: 100vw !important;
+  }
+
+  .hero-section {
+    width: 100% !important;
+    padding: 20px !important;
+    margin: 0 auto !important;
+  }
+
+  section {
+    padding: 40px 15px !important;
+  }
+
+  img, iframe {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+}
+
+
+
+  /* Fix section layout issues */
+  section, div, .container, .row, .col {
+    max-width: 100vw;
+    overflow: visible !important;
+    height: auto !important;
+    position: relative !important;
+  }
+
+  /* Responsive media (images, iframes, etc.) */
+  img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Optional: reduce padding for mobile */
+  section {
+    padding: 40px 15px;
+  }
+}
+/* Hero Text */  
+
+/* Section Titles */
+section h2, section h3 {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Cards (Projects, Services) */
+.card {
+  border: none;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--secondary-color);
+}
+
+ 
+
+  /* Prevent horizontal scroll on entire page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Optional: Center your main wrapper */
+.wrapper, .container, .main-content {
+  margin: 0 auto;
+  max-width: 1200px; /* or whatever width your layout needs */
+  width: 100%;
+}
+.hero {
+  background: linear-gradient(135deg, #0D47A1 0%, #FFC107 100%);
+  color: #ffffff;
+  padding: 100px 0;
+  text-align: center;
+  background-size: cover;
+}
+
+  
+  .hero-section {
+  margin-top: 55px; /* Shift down */
+}
+
+
+  .carousel,
+.carousel-item,
+.carousel-item img {
+  height: 90vh; /* Full screen height */
+  width: 100vw;  /* Full screen width */
+  object-fit: contain; /* Show full image without cropping */
+  object-position: center;
+}
+
+/* Responsive CSS for Mobile Devices */
+@media (max-width: 768px) {
+  .carousel,
+  .carousel-item,
+  .carousel-item img {
+    height: 26vh; /* Full screen height on mobile */
+    width: 100vw;  /* Full screen width on mobile */
+    object-fit: contain; /* Show full image without cropping */
+    object-position: center;
+  }
+}
+
+    .map-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Make sure no parent element hides the fixed positioning */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+.project-card img {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-card img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+
+    .section-title {
+      margin-bottom: 2rem;
+      font-weight: bold;
+      color: #0a3d62;
+    }
+
+    .project-card, .testimonial-card {
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 2rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover, .testimonial-card:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      background: #0a3d62;
+      color: white;
+      padding: 2rem 0;
+    }
+
+    .three-column-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f3f3f3;
+}
+
+.enquiry-form,
+.contact-details,
+.google-map {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.enquiry-form form input,
+.enquiry-form form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.enquiry-form form textarea {
+  height: 120px;
+}
+
+.enquiry-form form button {
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.enquiry-form form button:hover {
+  background-color: #45a049;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #0D47A1 0%, #FFC107 100%);
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #FFC107 0%, #0D47A1 100%);
+  color: #ffffff;
+}
+
+
+/* Contact Info Styling */
+.contact-details h2 {
+  color: #4CAF50;
+  font-size: 28px;
+}
+
+.contact-details h3 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.contact-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact-details i {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Tilt phone icon */
+.phone-icon {
+  transform: rotate(110deg);
+  display: inline-block;
+}
+
+/* Map Styling */
+.google-map {
+  height: 400px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .three-column-container {
+    flex-direction: column;
+  }
+
+  .google-map {
+    height: 300px;
+  }
+  
+}
+#fixed-social-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  gap: 10px;
+}
+
+#fixed-social-buttons a {
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.whatsapp {
+  background: #1ebe5d; /* slightly darker than #25D366 */
+}
+
+.instagram {
+  background: #a92b6f; /* slightly darker than #C13584 */
+}
+
+.whatsapp:hover,
+.instagram:hover {
+  opacity: 0.85;
+}
+
+
+.testimonial-card {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    
+    .swiper-slide-active .testimonial-card {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .navbar-scrolled {
+    background-color: white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+/* Sticky footer layout support */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer styling */
+.footer {
+  background: linear-gradient(135deg, #0D47A1, #001F54);
+  color: #ffffff;
+  padding: 40px 0 20px;
+  font-size: 16px;
+  margin-top: auto;
+}
+
+.footer a.footer-link {
+  color: #FFC107;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a.footer-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.footer-line {
+  border-top: 1px solid #ffffff;
+  margin: 20px 0;
+  opacity: 0.2;
+}
+
+
+  </style>
+  
+</link></link></head>
+<body>
+<!-- SEO -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ANAV Lifespaces",
+      "url": "https://www.anavlifespaces.com",
+      "logo": "https://www.anavlifespaces.com/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/ANAVlifespaces",
+        "https://www.instagram.com/ANAVlifespaces"
+      ]
+    }
+    </script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="ANAV Lifespaces - Premium real estate projects with modern floor plans and expert testimonials. Contact us to book your dream home." name="description"/>
+<meta content="real estate, ANAV Lifespaces, property in Mumbai, floor plans, buy home, luxury apartments" name="keywords"/>
+<meta content="ANAV Lifespaces" name="author"/>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="#">
+<img alt="Logo" src="image/logo1.png" style="height: 40px; width: auto; margin-right: 10px;"/>
+<span style="font-weight: bold;">ANAV <span style="font-weight: normal;">Lifespaces</span></span>
+</a>
+<button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+<li class="nav-item"><a class="nav-link" href="#enquiry-form">Contact Us</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Bootstrap CSS 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>-->
+<section class="hero-section" data-aos="fade-down">
+<div class="carousel slide" data-bs-ride="carousel" id="heroCarousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img alt="aaradhya_pride1" class="d-block w-100 h-100 " src="image/aaradhya_p_pride1.png"/>
+</div>
+<div class="carousel-item">
+<img alt="shree_ganesh1" class="d-block w-100 h-100 " src="image/shree_p_ganesh1.png"/>
+</div>
+<div class="carousel-item">
+<img alt="swastik_elite1" class="d-block w-100 h-100" src="image/swastik_p_elite1.png"/>
+</div>
+</div>
+<!-- <img src="image/project.png" class="d-block w-100" alt="Hero Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="image/1.jpg" class="d-block w-100" alt="Hero Image 3">
+      </div>
+      <div class="carousel-item">
+        <img src="image/project (2).jpg" class="d-block w-100" alt="Hero Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="image/2.jpg" class="d-block w-100" alt="Hero Image 3">
+      </div>
+      <div class="carousel-item">
+        <img src="image/project (3).png" class="d-block w-100" alt="Hero Image 3">
+      </div> -->
+<!-- Text Overlay -->
+<div class="hero-text-overlay position-absolute top-50 start-50 translate-middle text-white text-center px-4 py-3" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 12px;">
+<h1 class="display-4 fw-bold">ANAV Lifespaces</h1>
+<p class="lead">Beyond Walls, Building Legacies</p>
+</div>
+</section>
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Optional: Ensure carousel initializes -->
+<script>
+  const myCarousel = document.querySelector('#heroCarousel');
+  const carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 3000,
+    ride: 'carousel',
+    pause: false, // this prevents pausing on hover
+    wrap: true // allows infinite looping
+  });
+</script>
+
+<!-- About Us Section -->
+<section data-aos="fade-up" id="about">
+<div class="container">
+<h2>About Us</h2>
+<p>
+        Welcome to <strong>ANAV Lifespaces</strong>, a visionary real estate brand dedicated to crafting modern, value-driven spaces.
+        Based in Mumbai, we deliver thoughtfully planned residential and commercial developments where quality meets comfort.
+      </p>
+<p>
+        Our mission is to bring innovation, transparency, and trust to every project we undertake. From elegant designs to sustainable
+        architecture, we focus on creating environments that elevate everyday living.
+      </p>
+<ul>
+<li>Clear communication and ethical practices</li>
+<li>Eco-conscious, contemporary design philosophy</li>
+<li>End-to-end customer care and personalized support</li>
+</ul>
+<p>
+        At ANAV Lifespaces, we don’t just build structures — we build dreams, communities, and lifelong value.
+      </p>
+</div>
+</section>
+<section class="py-5" data-aos="fade-right" id="projects">
+<div class="container">
+<h2 class="section-title text-center mb-5">Our Projects</h2>
+<div class="row">
+<!-- Project 1 -->
+<div class="col-md-4 mb-4">
+<div class="project-card p-3 rounded shadow-sm h-100">
+<img alt="Aaradhya Pride" class="img-fluid rounded mb-3" src="image/project.png"/>
+<h5>Aaradhya Pride</h5>
+<p>
+<strong>REARA Number:</strong> P99000079350<br/>
+<strong>Location:</strong> Ganesh Nagar, Palghar<br/>
+<strong>Type:</strong> Residential<br/>
+<strong>Details:</strong> 2 BHK and 3 BHK apartments with modern amenities.
+            </p>
+<a class="btn btn-primary mt-2" download="" href="brochure/brochure.pdf" target="_blank">Download Brochure</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="col-md-4 mb-4">
+<div class="project-card p-3 rounded shadow-sm h-100">
+<img alt="Swastik Elite" class="img-fluid rounded mb-3" src="image/2.jpg"/>
+<h5>Swastik Elite</h5>
+<p>
+<strong>REARA Number:</strong> ABC987654<br/>
+<strong>Location:</strong> Ghatkopar, Mumbai<br/>
+<strong>Type:</strong> Residential<br/>
+<strong>Details:</strong> Luxury 2 &amp; 3 BHK apartments with rooftop amenities.
+            </p>
+<a class="btn btn-primary mt-2" download="" href="brochures/swastik-elite.pdf" target="_blank">Download Brochure</a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="col-md-4 mb-4">
+<div class="project-card p-3 rounded shadow-sm h-100">
+<img alt="Shree Ganesh" class="img-fluid rounded mb-3" src="image/1.jpg"/>
+<h5>Shree Ganesh</h5>
+<p>
+<strong>REARA Number:</strong> P99000077702<br/>
+<strong>Location:</strong> Ambedkar Nagar, Palghar<br/>
+<strong>Type:</strong> Residential<br/>
+<strong>Details:</strong> Spacious 1 &amp; 2 BHK homes with ample greenery.
+            </p>
+<a class="btn btn-primary mt-2" download="" href="brochures/shree-ganesh.pdf" target="_blank">Download Brochure</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- <section id="upcoming-projects" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Upcoming Projects</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="project-card">
+            <img src="image/upcoming.png" alt="Lakeview Residences" class="img-fluid rounded mb-3">
+            <h5>Shree Ganesh</h5>
+            <p>To be added</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+<section class="pt-3 pb-5" data-aos="zoom-in" id="testimonials">
+<div class="container">
+<h2 class="text-center mb-5" style="color: #5c913b;">TESTIMONIAL</h2>
+<div class="swiper mySwiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="testimonial-card p-4 shadow rounded text-center">
+<p class="mb-3">"Working with ANAV Lifespaces was a pleasure."</p>
+<h5 class="text-success">Mr. Aarti M.</h5>
+<small>Resident</small>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-card p-4 shadow rounded text-center">
+<p class="mb-3">"Excellent project management and great transparency in all dealings."</p>
+<h5 class="text-success">Mr. Vivek T.</h5>
+<small>Resident</small>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-card p-4 shadow rounded text-center">
+<p class="mb-3">"7th floor tower building, 39 flats, offices and gym, excellent parking."</p>
+<h5 class="text-success">Ms. Twinkle</h5>
+<small>Resident</small>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-card p-4 shadow rounded text-center">
+<p class="mb-3">"Excellent project management and great transparency in all dealings."</p>
+<h5 class="text-success">Mr. Vivek T.</h5>
+<small>Resident</small>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-card p-4 shadow rounded text-center">
+<p class="mb-3">"Excellent project management and great transparency in all dealings."</p>
+<h5 class="text-success">Mr. Vivek T.</h5>
+<small>Resident</small>
+</div>
+</div>
+<!-- You can add more testimonials here -->
+</div>
+<!-- Pagination Dots -->
+<div class="swiper-pagination"></div>
+</div>
+</div>
+</section>
+<section class="py-5" data-aos="fade-left" id="enquiry-form">
+<div class="three-column-container">
+<!-- Enquiry Form -->
+<div class="enquiry-form">
+<form action="https://formspree.io/f/mldbddne" id="contact-form" method="POST">
+<input name="name" placeholder="Name*" required="" type="text"/>
+<input name="phone" pattern="[0-9]{10}" placeholder="Mobile No*" required="" title="Enter a 10-digit mobile number" type="tel"/>
+<input name="_replyto" placeholder="Email Id*" required="" type="email"/>
+<textarea name="message" placeholder="Message*" required=""></textarea>
+<button class="btn btn-primary">Submit</button>
+</form>
+</div>
+<!-- Contact Info -->
+<div class="contact-details">
+<h2>Enquiry Form</h2>
+<p>We welcome your enquiries.<br/>
+      Write to us to receive more specific details and we shall walk you through.</p>
+<h3>Contact us</h3>
+<hr/>
+<p><i class="fas fa-phone-alt phone-icon"></i> +91 9876543210</p>
+<p><i class="fas fa-envelope"></i> sales@anavlifespaces.com</p>
+<h3>Office Address</h3>
+<p>
+<i class="fas fa-map-marker-alt"></i> Plot No.3, Laxmi Wadi, Tembhode Naka, West, near Raheja Prime, Palghar, Maharashtra 401404
+      </p>
+</div>
+<!-- Google Map -->
+<div class="google-map">
+<h5>Office Location</h5>
+<iframe allowfullscreen="" height="100%" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.322916438756!2d72.75562897375518!3d19.698871532126315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71dfb89697d21%3A0x872eea5ca4671bad!2sSwastik%20Elite!5e0!3m2!1sen!2sin!4v1745130943424!5m2!1sen!2sin" style="border:0;" width="100%">
+</iframe>
+</div>
+</div>
+</section>
+
+<!-- WhatsApp and Instagram Buttons 
+    <div class="social-buttons">
+      <a href="https://wa.me/919653191940" target="_blank" class="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/yourinstagram" target="_blank" class="instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>-->
+
+<!-- Rights reserved -->
+<footer class="footer mt-auto">
+<div class="container">
+<div class="row">
+<!-- Left: Branding -->
+<div class="col-md-6 text-start">
+<h5>ANAV Lifespaces</h5>
+<p>Beyond Walls, Building Legacies</p>
+</div>
+<!-- Right: Links -->
+<div class="col-md-6 text-md-end text-start mt-3 mt-md-0">
+<a class="footer-link" href="Privacy policy.html">Privacy Policy</a> |
+        <a class="footer-link" href="Terms of service.html">Terms of Service</a> |
+        <a class="footer-link" href="Contact.html">Contact</a>
+</div>
+</div>
+<hr class="footer-line"/>
+<p class="text-center small mb-0">© 2025 ANAV Lifespaces. All rights reserved.</p>
+</div>
+</footer>
+<script>
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully! Thanks for reaching out.");
+        form.reset();
+      } else {
+        alert("Oops! Something went wrong. Try again.");
+      }
+    } catch (error) {
+      alert("Error connecting to the server.");
+    }
+  });
+</script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      }
+    }
+  });
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+    }
+  });
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS Animation Library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // ms
+    once: false,     // Animate on every scroll
+    mirror: true     // Re-animate on scroll up
+  });
+</script>
+</div></section><div id="fixed-social-buttons"><a class="whatsapp" href="https://wa.me/919653191940" style="display:block;margin:10px 0;color:white;background:#25D366;padding:12px;border-radius:50%;text-align:center;width:48px;height:48px;" target="_blank"><i class="fab fa-whatsapp"></i></a><a class="instagram" href="https://www.instagram.com/your-profile" style="display:block;margin:10px 0;color:white;background:#C13584;padding:12px;border-radius:50%;text-align:center;width:48px;height:48px;" target="_blank"><i class="fab fa-instagram"></i></a></div></body>
+</html>
