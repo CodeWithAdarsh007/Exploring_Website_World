@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+
+<html lang="en" style="--primary-color: #0a3d62; --secondary-color: #f39c12; --background-color: #f8f9fa; --text-color: #333;">
+<head>
+<link href="style-v3.css" rel="stylesheet"/>
+<link rel="me" href="https://www.linkedin.com/in/adarshpandey9653">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<style>
+/* Disable scroll on popup */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Popup background */
+#enquiryModal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+/* Modal box styling */
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Logo */
+.popup-logo {
+  display: block;
+  margin: 0 auto 10px;
+  height: 50px;
+}
+
+/* Headline */
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #212121;
+  font-size: 24px;
+}
+
+/* Input fields */
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Checkbox section */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* Submit button in your theme */
+.submit-btn {
+  background-color: #c9d42f;
+  color: #000;
+  font-weight: bold;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #b0be2a;
+}
+
+
+</style>
+
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ANAV Lifespaces is a premium real estate developer offering luxurious and affordable properties in India." name="description"/>
+<meta content="Real Estate, Property, ANAV Lifespaces, Residential, Commercial" name="keywords"/>
+<meta content="ANAV Lifespaces Real Estate" name="author"/>
+<link href="image/fevicon1.jpg" rel="icon" type="jpg"/>
+<title>ANAV Lifespaces</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<!-- Lightbox2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- Swiper CSS -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style> 
+  #enquiryModal {
+  display: none;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+}
+body.modal-open {
+  overflow: hidden;
+}
+#enquiryModal {
+  pointer-events: all;
+}
+  
+  </style>
+  
+</link></link>
+<style>
+
+</style>
+
+</head>
+<body>
+<!-- SEO -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ANAV Lifespaces",
+      "url": "https://www.anavlifespaces.com",
+      "logo": "https://www.anavlifespaces.com/logo1.png",
+      "sameAs": [
+        "https://www.facebook.com/ANAVlifespaces",
+        "https://www.instagram.com/ANAVlifespaces"
+      ]
+    }
+    </script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="ANAV Lifespaces - Premium real estate projects with modern floor plans and expert testimonials. Contact us to book your dream home." name="description"/>
+<meta content="real estate, ANAV Lifespaces, property in Mumbai, floor plans, buy home, luxury apartments" name="keywords"/>
+<meta content="ANAV Lifespaces" name="author"/>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="#">
+<img alt="Logo" src="image/logo.jpg" style="height: 50px; width: auto; margin-right: 10px;"/>
+<span style="font-weight: bold;">ANAV <span style="font-weight: normal;">Lifespaces</span></span>
+</a>
+<!-- Navbar Toggler -->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<!-- Navbar Collapse -->
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+    <li class="nav-item"><a class="nav-link" href="#enquiry-form">Contact Us</a></li>
+  </ul>
+</div>
+</div>
+</nav>
+<!-- Bootstrap CSS 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>-->
+<section class="hero-section" data-aos="fade-down">
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="image/aaradhya_p_pride1.png" class="d-block w-100 h-100" alt="aaradhya_pride1">
+    </div>
+    <div class="carousel-item">
+      <img src="image/shree_p_ganesh1.png" class="d-block w-100 h-100" alt="shree_ganesh1">
+    </div>
+    <div class="carousel-item">
+      <img src="image/swastik_p_elite1.png" class="d-block w-100 h-100" alt="swastik_elite1">
+    </div>
+  </div>
+<!-- <img src="image/project.png" class="d-block w-100" alt="Hero Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="image/1.jpg" class="d-block w-100" alt="Hero Image 3">
+      </div>
+      <div class="carousel-item">
+        <img src="image/project (2).jpg" class="d-block w-100" alt="Hero Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="image/2.jpg" class="d-block w-100" alt="Hero Image 3">
+      </div>
+      <div class="carousel-item">
+        <img src="image/project (3).png" class="d-block w-100" alt="Hero Image 3">
+      </div> -->
+<!-- Text Overlay -->
+<!-- <div class="hero-text-overlay position-absolute top-50 start-50 translate-middle text-white text-center px-4 py-3" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 12px;">
+<h1 class="display-4 fw-bold">ANAV Lifespaces</h1>
+<p class="lead">Beyond Walls, Building Legacies</p>-->
+</div>
+</section>
+
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Optional: Ensure carousel initializes -->
+<script>
+  const myCarousel = document.querySelector('#heroCarousel');
+  const carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 3000,
+    ride: 'carousel',
+    pause: false,
+    wrap: true
+  });
+</script>
+
+
+<section data-aos="fade-up" id="about" class="py-5">
+  <div class="container-fluid px-4 px-md-5">
+    <div class="row align-items-center">
+
+      <!-- About Image -->
+      <div class="col-md-6 ps-md-3 pe-md-2 mb-4 mb-md-0">
+  <div class="image-wrapper position-relative">
+    <img src="image/about1.jpg" alt="About ANAV Lifespaces" class="img-fluid rounded shadow-sm w-100" style="height: 100%; object-fit: cover;">
+    <div class="image-caption mt-2 text-center">
+      <strong>Beyond Walls, Building Legacies.</strong>
+    </div>
+  </div>
+</div>
+
+
+      <!-- About Text -->
+      <div class="col-md-6 ps-md-4">
+        <h2 class="section-title">About Us</h2>
+        <p>
+          Welcome to <strong>ANAV Lifespaces</strong>, a visionary real estate brand dedicated to crafting modern, value-driven spaces.
+          Based in Mumbai, we deliver thoughtfully planned residential and commercial developments where quality meets comfort.
+        </p>
+        <p>
+          Our mission is to bring innovation, transparency, and trust to every project we undertake. From elegant designs to sustainable
+          architecture, we focus on creating environments that elevate everyday living.
+        </p>
+        <ul>
+          <li>Clear communication and ethical practices</li>
+          <li>Eco-conscious, contemporary design philosophy</li>
+          <li>End-to-end customer care and personalized support</li>
+        </ul>
+        <p>
+          At ANAV Lifespaces, we don’t just build structures — we build dreams, communities, and lifelong value.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 90%;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+.modal-open {
+  overflow: hidden;
+}
+
+</style>
+<section class="py-5" data-aos="fade-right" id="projects">
+<div class="container">
+<h2 class="section-title text-center mb-5">Our Projects</h2>
+<div class="row">
+<!-- Project 1 -->
+<div class="col-md-4 mb-4">
+<div class="project-card p-3 rounded shadow-sm h-100">
+<img alt="Aaradhya Pride" class="img-fluid rounded mb-3" src="image/project.png"/>
+<h5>Aaradhya Pride</h5>
+<p>
+<strong>RERA Number:</strong> P99000079350<br/>
+<strong>Location:</strong> Ganesh Nagar, Tembhode, Palghar (W)<br/>
+<strong>Type:</strong> Residential<br/>
+<strong>Details:</strong>Luxury 1 BHK ,2 BHK, 3 BHK & 5 BHK apartments with Temple and Garden in vicinity.
+            </p>
+<button class="download-btn" data-project="Aaradhya Pride">Download Brochure</button>
+
+
+</div>
+</div>
+<!-- Project 2 -->
+<div class="col-md-4 mb-4">
+<div class="project-card p-3 rounded shadow-sm h-100">
+<img alt="Swastik Elite" class="img-fluid rounded mb-3" src="image/2.jpg"/>
+<h5>Swastik Elite</h5>
+<p>
+<strong>RERA Number:</strong>Completed 18 months before RERA date.<br/>
+<strong>Location:</strong>Tembhode Naka, Palghar<br/>
+<strong>Type:</strong> Commercial & Residential<br/>
+<strong>Details:</strong> Luxury 1, 2 & 3 BHK apartments.
+            </p>
+<button class="download-btn" data-project="Swastik Elite">Download Brochure</button>
+
+</div>
+</div>
+<!-- Project 3 -->
+<div class="col-md-4 mb-4">
+<div class="project-card p-3 rounded shadow-sm h-100">
+<img alt="Shree Ganesh" class="img-fluid rounded mb-3" src="image/1.jpg"/>
+<h5>Shree Ganesh</h5>
+<p>
+<strong>RERA Number:</strong> P99000077702<br/>
+<strong>Location:</strong> Ambedkar Nagar, Palghar<br/>
+<strong>Type:</strong>Commercial & Residential<br/>
+<strong>Details:</strong> Spacious 1 & 2 BHK homes with ample greenery.
+            </p>
+<button class="download-btn" data-project="Shree Ganesh">Download Brochure</button>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<style>
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #1e3a8a;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #c9d42f;
+  color: #000;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+.submit-btn:hover {
+  background-color: #b0be2a;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("brochureForm");
+  const modal = document.getElementById("brochureModal");
+  const checkbox = document.getElementById("consent");
+
+  const nameInput = form.querySelector('input[name="name"]');
+  const emailInput = form.querySelector('input[name="email"]');
+  const phoneInput = form.querySelector('input[name="phone"]');
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+  }
+
+  // ✅ Close button handler
+  const closeButton = document.querySelector(".close-button");
+  if (closeButton) {
+    closeButton.addEventListener("click", closeModal);
+  }
+
+  // ✅ Form submission handler
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    if (!nameInput.value.trim()) {
+      alert("Please enter your name.");
+      return;
+    }
+    if (!emailInput.value.trim()) {
+      alert("Please enter your email.");
+      return;
+    }
+    if (!phoneInput.value.trim()) {
+      alert("Please enter your phone number.");
+      return;
+    }
+
+    const formData = new FormData(form);
+    const project = formData.get("project_name");
+
+    const response = await fetch("https://formspree.io/f/mgvyzwnj", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" }
+    });
+
+    if (response.ok) {
+      alert("Thanks! Your brochure will download now.");
+      closeModal();
+
+      const downloadLinks = {
+        "Aaradhya Pride": "brochure/aaradhya-pride.pdf",
+        "Swastik Elite": "brochure/swastik-elite.pdf",
+        "Shree Ganesh": "brochure/shree-ganesh.pdf"
+      };
+
+      const file = downloadLinks[project];
+      if (file) {
+        setTimeout(() => window.open(file, "_blank"), 300);
+      } else {
+        alert("Brochure file not found.");
+      }
+    } else {
+      alert("Submission failed. Please try again.");
+    }
+  });
+
+  // ✅ Open modal when download button is clicked
+  document.querySelectorAll(".download-btn").forEach(button => {
+    button.addEventListener("click", function () {
+      const project = this.dataset.project;
+      document.getElementById("projectNameInput").value = project;
+      modal.style.display = "flex";
+      document.body.classList.add("modal-open");
+    });
+  });
+});
+</script>
+
+
+
+
+<!-- <section id="upcoming-projects" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Upcoming Projects</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="project-card">
+            <img src="image/upcoming.png" alt="Lakeview Residences" class="img-fluid rounded mb-3">
+            <h5>Shree Ganesh</h5>
+            <p>To be added</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+<!-- <section class="pt-3 pb-5" data-aos="zoom-in" id="testimonials">
+<div class="container">
+<h2 class="text-center mb-5" style="color: #5c913b;">TESTIMONIAL</h2>
+<div class="swiper mySwiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="testimonial-card p-4 shadow rounded text-center">
+<p class="mb-3">"Working with ANAV Lifespaces was a pleasure."</p>
+<h5 class="text-success">Mr. Aarti M.</h5>
+<small>Resident</small>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-card p-4 shadow rounded text-center">
+<p class="mb-3">"Excellent project management and great transparency in all dealings."</p>
+<h5 class="text-success">Mr. Vivek T.</h5>
+<small>Resident</small>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-card p-4 shadow rounded text-center">
+<p class="mb-3">"7th floor tower building, 39 flats, offices and gym, excellent parking."</p>
+<h5 class="text-success">Ms. Twinkle</h5>
+<small>Resident</small>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-card p-4 shadow rounded text-center">
+<p class="mb-3">"Excellent project management and great transparency in all dealings."</p>
+<h5 class="text-success">Mr. Vivek T.</h5>
+<small>Resident</small>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-card p-4 shadow rounded text-center">
+<p class="mb-3">"Excellent project management and great transparency in all dealings."</p>
+<h5 class="text-success">Mr. Vivek T.</h5>
+<small>Resident</small>
+</div>
+</div>
+You can add more testimonials here
+</div>
+Pagination Dots -->
+<!-- <div class="swiper-pagination"></div>
+</div>
+</div>
+</section> -->
+<section class="py-5" data-aos="fade-left" id="enquiry-form">
+<div class="three-column-container">
+<!-- Enquiry Form -->
+<div class="enquiry-form">
+<form action="https://formspree.io/f/mdkzdnpg" id="contact-form" method="POST">
+<input name="name" placeholder="Name*" required="" type="text"/>
+<input name="phone" pattern="[0-9]{10}" placeholder="Mobile No*" required="" title="Enter a 10-digit mobile number" type="tel"/>
+<input name="_replyto" placeholder="Email Id*" required="" type="email"/>
+<textarea name="message" placeholder="Message*" required=""></textarea>
+<button class="btn btn-primary">Submit</button>
+</form>
+</div>
+<!-- Contact Info -->
+<div class="contact-details">
+<h2>Enquiry Form</h2>
+<p>We welcome your enquiries.<br/>
+      Write to us to receive more specific details and we shall walk you through.</p>
+<h3>Contact us</h3>
+<hr/>
+<p><i class="fas fa-phone-alt phone-icon"></i> +91 7303044556 / +91 7304051061</p>
+<p><i class="fas fa-envelope"></i>anavlifespaces@gmail.com</p>
+<h3>Office Address</h3>
+<p>
+<i class="fas fa-map-marker-alt"></i> Shop No. 07 & 09,Swastik Elite CHSL, Laxmi Wadi, Tembhode Naka, West, near Raheja Prime, Palghar, Maharashtra 401404
+      </p>
+</div>
+<!-- Google Map -->
+<div class="google-map">
+<h5>Office Location</h5>
+<iframe allowfullscreen="" height="100%" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.322916438756!2d72.75562897375518!3d19.698871532126315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71dfb89697d21%3A0x872eea5ca4671bad!2sSwastik%20Elite!5e0!3m2!1sen!2sin!4v1745130943424!5m2!1sen!2sin" style="border:0;" width="100%">
+</iframe>
+</div>
+</div>
+</section>
+
+<!-- Rights reserved -->
+<footer class="footer mt-auto">
+  <div class="container">
+    <div class="row">
+      <!-- Left: Branding -->
+      <div class="col-md-6 text-start">
+        <img alt="Logo" src="image/logo.jpg" style="height: 50px; width: auto; margin-left: 10px; padding-left: 35px; padding-top: -25px;"/>  
+        <h5>ANAV Lifespaces</h5>
+        <p>Beyond Walls, Building Legacies</p>
+      </div>
+
+      <!-- Right: Links -->
+      <div class="col-md-6 text-md-end text-start mt-3 mt-md-0">
+        <a class="footer-link" href="Privacy policy.html">Privacy Policy</a> |
+        <a class="footer-link" href="Terms of service.html">Terms of Service</a> |
+        <a class="footer-link" href="Contact.html">Contact</a>
+
+        <!-- ✅ Created and managed line -->
+        <div style="margin-top: 10px; font-size: 1.1rem; font-weight: 500; color: #e0e6ed;">
+  Created and Managed by 
+  <a href="https://www.linkedin.com/in/adarshpandey9653" target="_blank" style="color: #e0e6ed; text-decoration: underline;">
+    Adarsh Pandey
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <hr class="footer-line"/>
+    <p class="text-center small mb-0">© 2025 ANAV Lifespaces. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully! Thanks for reaching out.");
+        form.reset();
+      } else {
+        alert("Oops! Something went wrong. Try again.");
+      }
+    } catch (error) {
+      alert("Error connecting to the server.");
+    }
+  });
+</script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      }
+    }
+  });
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+    }
+  });
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS Animation Library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // ms
+    once: false,     // Animate on every scroll
+    mirror: true     // Re-animate on scroll up
+  });
+</script>
+<script>
+window.addEventListener('load', function () {
+  document.getElementById("enquiryModal").style.display = "block";
+});
+
+function closeModal() {
+  document.getElementById("enquiryModal").style.display = "none";
+}
+</script>
+
+</head>
+</div>
+</section>
+
+<div id="fixed-social-buttons">
+  <a href="https://wa.me/917304051061?text=Hello%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20know%20more%20about%20the%20projects." target="_blank" class="whatsapp">
+      <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://www.instagram.com/anav_lifespaces?igsh=MTlxZXNqY3RlYWx2" target="_blank" class="instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.facebook.com/share/19SashUD9Z/" target="_blank" class="facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+</div>
+
+
+
+
+<div id="enquiryModal">
+  <div class="modal-content">
+    <!-- Close Button -->
+    <span class="close-button" onclick="closeModal()">x</span>
+    <img src="image/logo.jpg" alt="ANAV Logo" class="popup-logo" />
+    <h2>Login Page</h2>
+
+    <form id="enquiryForm" method="POST">
+      <label for="name">Name *</label>
+      <input type="text" name="name" placeholder="Name" required>
+
+      <label for="email">Email *</label>
+      <input type="email" name="email" placeholder="Your Email" required
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net|edu|gov|co|info)$"
+        title="Enter a valid email address like user@example.com or user@example.in" />
+
+      <label for="phone">Phone *</label>
+      <input type="tel" name="phone" placeholder="Your Phone" required pattern="[0-9]{10}" title="Please enter a 10-digit mobile number" />
+
+      <!-- Consent checkbox -->
+      <div class="checkbox d-flex align-items-start gap-2">
+        <input type="checkbox" id="consent" required checked style="margin-top: 10px;" />
+        <label for="consent" style="margin: 0;">
+          I give my consent for <strong>ANAV Lifespaces</strong> and its representatives to reach out to me with updates and notifications through email, SMS, WhatsApp, and phone calls.
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">SUBMIT</button>
+    </form>
+  </div>
+</div>
+<style>.close-button {
+  position: absolute;
+  right: 15px;           /* ✅ Aligns it to the top-right corner */
+  top: 10px;
+  font-size: 36px;       /* ✅ Makes the × bigger */
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  z-index: 10;
+}
+</style>
+
+
+<script>
+window.addEventListener("load", function () {
+  document.getElementById("enquiryModal").style.display = "flex";
+  document.body.classList.add("modal-open");
+});
+
+function closeModal() {
+  document.getElementById("enquiryModal").style.display = "none";
+  document.body.classList.remove("modal-open");
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("enquiryForm");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // Prevent default form action
+
+    const formData = new FormData(form);
+    const response = await fetch("https://formspree.io/f/meokzjrd", {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      alert("Thank you! Your enquiry has been submitted.");
+      form.reset();
+      closeModal(); // Modal only closes after successful submission
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  });
+});
+</script>
+
+<!-- BROCHURE MODAL -->
+<div id="brochureModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h2>Download Brochure</h2>
+    <form id="brochureForm" novalidate>
+      <input type="hidden" name="project_name" id="projectNameInput" />
+
+      <label for="name">Name *</label>
+      <input type="text" name="name" placeholder="Name" required>
+
+      <label for="email">Email *</label>
+      <input type="email" name="email" placeholder="Your Email" required
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net|edu|gov|co|info)$"
+        title="Enter a valid email address like user@example.com or user@example.in" />
+
+      <label for="phone">Phone *</label>
+      <input type="tel" name="phone" placeholder="Your Phone" required pattern="[0-9]{10}" title="Please enter a 10-digit mobile number" />
+
+      <button type="submit">Submit & Download</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const brochureModal = document.getElementById("brochureModal");
+
+  // Close modal when clicking outside its content
+  brochureModal.addEventListener("click", function (event) {
+    if (event.target === brochureModal) {
+      brochureModal.style.display = "none";
+      document.body.classList.remove("modal-open"); // unlock scroll
+    }
+  });
+
+  // Optional: Add Esc key to close
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && brochureModal.style.display === "flex") {
+      brochureModal.style.display = "none";
+      document.body.classList.remove("modal-open");
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
